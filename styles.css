@@ -1,0 +1,100 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* position: relative; */
+}
+
+/* Footer for linking */
+
+.footer {
+    height: min-content;
+    width: 100%;
+    vertical-align: bottom;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    display: inline-block;
+}
+
+.footer-text-left {
+    position: absolute;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    bottom: 0px;
+    left: 0px;
+    font-size: 24px;
+    text-decoration: none;
+    float: left;
+    
+}
+
+.footer-content-right {
+    bottom: 0px;
+    padding-right:40px;
+    margin-top:20px;
+    float:right;
+}
+
+.relay {
+    height: max-content;
+    width: 60px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    transition: 3s;
+}
+
+.relay:hover {
+    /* TODO: Fix this effect, it is not smooth */
+    top: -5px;
+}
+
+/* Definte the page layout */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 100px;
+    padding-right: 100px; */
+}
+
+.page h1 {
+    font-size: 42px;
+    margin: 10px;
+}
+
+.page p {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.introduction {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    text-align: center;
+}
+
+.introduction img {
+    height: 30vh;
+    border-radius: 100%;
+    display: inline-block;
+    /* transition: 1s; */
+}
+
+/* TODO: Maybe make an effect on hover? */
+/* .introduction img:hover {
+    border-radius: 0%;
+} */

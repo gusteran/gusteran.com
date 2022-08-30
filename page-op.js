@@ -1,6 +1,6 @@
 pageElems = ['intro', 'robot', 'software', 'outdoors'];
 NUM_PAGES = 4;
-TIME_DELAY = 500;
+TIME_DELAY = 2000;
 currentPage = 0;
 lastScroll = Date.now().valueOf();
 
@@ -23,20 +23,24 @@ $(document).keydown(function(e){
 
 
 function changePage(scroll){
-    if(Date.now().valueOf() > lastScroll + TIME_DELAY) {
+    if (Date.now().valueOf() < lastScroll + TIME_DELAY) {
+        // document
+        //   .getElementById(pageElems[currentPage])
+        //     .scrollIntoView({ behavior: "smooth" });
+        return;
+    }
+    lastScroll = Date.now().valueOf();
 
-        // Checks the direction of scrolling
-        if(scroll < 0){
-            if(currentPage != NUM_PAGES-1) currentPage += 1;
-        } else {
-            if(currentPage != 0) currentPage -= 1;
-        }
-
+    // Checks the direction of scrolling
+    if(scroll < 0){
+        if(currentPage != NUM_PAGES-1) currentPage += 1;
+    } else {
+        if(currentPage != 0) currentPage -= 1;
     }
 
     console.log(currentPage)
     console.log(pageElems[currentPage]);
     console.log(lastScroll);
-    // document.getElementById(pageElems[currentPage]).scrollIntoView(scroll < 0);
+    // document.getElementById(pageElems[currentPage]).scrollIntoView();
     document.getElementById(pageElems[currentPage]).scrollIntoView({behavior:'smooth'});
 }

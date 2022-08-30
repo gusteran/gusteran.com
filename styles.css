@@ -57,6 +57,11 @@ body {
     top: -5px;
 }
 
+#github {
+   -webkit-filter: invert(1);
+   filter: invert(1);
+}
+
 /* Definte the page layout */
 
 .page {
@@ -88,10 +93,32 @@ body {
 }
 
 .introduction img {
-    height: 30vh;
+    height: 35vh;
     border-radius: 100%;
     display: inline-block;
     /* transition: 1s; */
+}
+
+
+
+.information {
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.information img {
+    border-radius: 50px;
+}
+
+.information h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.information p {
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 /* TODO: Maybe make an effect on hover? */
